@@ -1,0 +1,45 @@
+
+HelloBlog => 
+    
+    DataBase => Table =>
+            1) users
+                a) id
+                b) name
+                c) email
+                d) password
+                e) gender
+                f) about
+                g) rdate (Registration date)
+                h) profile (Image)
+            
+            2) categories
+                a) cid [INT(12), PK, NN, AI]
+                b) name [VARCHAR(100), NN]
+                c) description [VARCHAR(200) ]
+                    [
+                        i) Java Programming (Java is one of the most popular programming language)
+                        ii) Python Programming (Python is one of the most popular for machine learning)
+                        iii) Android App (An Android app simplifies daily tasks, offers unique features, and enhances user experiences with intuitive interfaces.)
+                    ]
+
+            3) posts
+                a) pid [INT(12), PK, NN, AI]
+                b) pTitle [VARCHAR(150), NN]
+                c) pContent [TEXT]
+                d) pCode [LONGTEXT]
+                e) pPic [VARCHAR(150)]
+                f) pDate [TIMESTAMP, now()]
+                g) catId [INT(12)] {foren id => categories:=> cid}
+                h) userID [INT(12)] {foren id => users:=> id}
+
+            4) likes
+                a) lid [INT(20), PK, NN, AI]
+                b) pid [INT(20)] {foren pid => posts:=> pid}
+                c) uid [INT(20)] {foren uid => users:=> id}
+
+            5) comment
+                a) cmnId [INT(20), PK, NN, AI]
+                b) cmnText [TEXT NN]
+                c) posId [INT(20)] {foren pid => posts:=> pid}
+                d) useId [INT(20)] {foren uid => users:=> id}
+

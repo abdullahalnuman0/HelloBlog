@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <!--    <error-page>
+        <error-code>404</error-code>
+        <location>error_page.jsp</location>
+    </error-page>-->
+    <!--======================================================-->
+
+
+    <!--======================================================-->
+    <!--======================================================-->
+    <servlet>
+        <servlet-name>dashboard</servlet-name>
+        <jsp-file>/dashboard.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>dashboard</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <!--======================================================-->
+    <!--======================================================-->
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <jsp-file>/profile.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <!--======================================================-->
+    <!--======================================================-->
+    
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--======================================================-->
+    <!--======================================================-->
+    
+    
+    
+    <servlet>
+        <servlet-name>show_blog_page</servlet-name>
+        <jsp-file>/show_blog_page.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>show_blog_page</servlet-name>
+        <url-pattern>/show_blog_page</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--======================================================-->
+    <!--======================================================-->
+    
+    
+    <servlet>
+        <servlet-name>login_page</servlet-name>
+        <jsp-file>/login_page.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>login_page</servlet-name>
+        <url-pattern>/login_page</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--======================================================-->
+    <!--======================================================-->
+    
+    
+    
+    <servlet>
+        <servlet-name>register_page</servlet-name>
+        <jsp-file>/register_page.jsp</jsp-file>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>register_page</servlet-name>
+        <url-pattern>/register_page</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!--======================================================-->
+    <!--======================================================-->
+    
+    
+    
+    
+    
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.CommentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostDeleteServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.PostDeleteServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.EditServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddPostServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.AddPostServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LikeServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.LikeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPostServlet</servlet-name>
+        <url-pattern>/AddPostServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LikeServlet</servlet-name>
+        <url-pattern>/LikeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/CommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostDeleteServlet</servlet-name>
+        <url-pattern>/PostDeleteServlet</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_page.jsp</location>
+    </error-page>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>dev.hello.blog.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
